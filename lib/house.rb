@@ -36,4 +36,8 @@ class House
       room.area
     end
   end
+
+  def details
+    {"price" => price, "address" => @address}
+  end
 end
