@@ -19,4 +19,12 @@ class House
   def add_room(room)
     @rooms.push(room)
   end
+
+  def market_average?
+    false
+  end
+  
+  def rooms_from_category
+    
+  end
 end
