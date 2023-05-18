@@ -21,13 +21,13 @@ RSpec.describe House do
       expect(house.address).to eq "123 sugar lane"
     end
 
-    it 'rooms' do 
-      house = House.new("$400000", "123 sugar lane")
-      room_1 = Room.new(:bedroom, 10, '13')
-      room_2 = Room.new(:bedroom, 11, '15')  
+    # it 'rooms' do 
+    #   house = House.new("$400000", "123 sugar lane")
+    #   room_1 = Room.new(:bedroom, 10, '13')
+    #   room_2 = Room.new(:bedroom, 11, '15')  
 
-      expect(house.rooms).to be_a Array
-    end
+    #   expect(house.rooms).to be_a Array
+    # end
 
     it 'adds rooms' do 
       house = House.new("$400000", "123 sugar lane")
@@ -55,6 +55,8 @@ RSpec.describe House do
       house.add_room(room_2)
       house.add_room(room_3)
       house.add_room(room_4)
+
+      expect(house.rooms).to eq [room_1, room_2, room_3, room_4]
     end
 
     it 'checks room based off category' do 
