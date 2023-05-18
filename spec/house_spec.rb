@@ -7,14 +7,18 @@ RSpec.describe House do
       house = House.new("$400000", "123 sugar lane")
 
       expect(house).to be_a House
-      expect(house.price).to eq 400000
-      expect(house.address).to eq "123 sugar lane"
     end
 
-    xit 'has a price' do
+    it 'has a price' do
       house = House.new("$400000", "123 sugar lane")
 
       expect(house.price).to eq 400000
+    end
+
+    it 'has a address' do
+      house = House.new("$400000", "123 sugar lane")
+
+      expect(house.address).to eq "123 sugar lane"
     end
   end
 end
