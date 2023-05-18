@@ -21,7 +21,7 @@ class House
   end
 
   def market_average?
-    false
+    if @price > ("500,000") then true else false end
   end
   
   def rooms_from_category
