@@ -25,7 +25,15 @@ class House
     if @price > ("$500,000") then true else false end
   end
   
-  def rooms_from_category
-    
+  def rooms_from_category(category)
+    @rooms.select do |room|
+        room.category == category
+    end
+  end
+
+  def area 
+    @rooms.sum do |room|
+      room.area
+    end
   end
 end
